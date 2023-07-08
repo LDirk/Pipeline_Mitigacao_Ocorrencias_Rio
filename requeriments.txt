@@ -3,6 +3,6 @@ requests
 pandas
 datetime
 pytz
-timeout_decorator
+
 
 #pip install -r requeriments.txt
