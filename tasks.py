@@ -9,9 +9,12 @@ import os.path
 import csv
 
 @task
+
 def SCRIPT_ETL():
 
     current_datetime = datetime.now(pytz.timezone('America/Sao_Paulo'))
+
+    # ETAPA : CONSUMO DOS DADOS
 
     url = 'https://api.dados.rio/v2/adm_cor_comando/ocorrencias_abertas'
     log('Dados de ocorrencias consumido com sucesso.')
@@ -41,6 +44,8 @@ def SCRIPT_ETL():
                 evento['id'] = evento_id
             df_org = pd.concat([df_org, pd.DataFrame(eventos)])
 
+    # Etapa - Tratamento dos dados
+
     df_CET_RIO = df_org.loc[(df_org['orgao'] == 'CET-RIO')]
     df_CET_RIO = df_CET_RIO.sort_values(by='inicio', ascending=False)
 
@@ -61,6 +66,8 @@ def SCRIPT_ETL():
     df_csv = df_csv.sort_values(by=['Tipo_De_Ocorrencia', 'Data_Consulta_Api'], ascending=[True, False])
 
     log('Dados Tratados com sucesso.')
+
+    # Etapa - Extração dos dados.
 
     filename = 'dados/dados_ocorrencias2.csv'
 
