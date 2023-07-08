@@ -13,6 +13,4 @@ schedule = IntervalSchedule(
 with Flow('Ocorrencias', schedule = schedule) as flow:
     SCRIPT_ETL()
 
-with Flow('Ocorrencias', schedule=schedule) as flow_f:
-    SCRIPT_ETL()
 
