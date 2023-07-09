@@ -1,3 +1,4 @@
+from io import StringIO
 import pandas as pd
 from prefect import task
 import requests
@@ -14,36 +15,43 @@ def SCRIPT_ETL():
     current_datetime = datetime.now(pytz.timezone('America/Sao_Paulo'))
 
     # ETAPA : CONSUMO DOS DADOS
-
     url = 'https://api.dados.rio/v2/adm_cor_comando/ocorrencias_abertas'
-    log('Dados de ocorrencias consumido com sucesso.')
+    base_url = 'https://api.dados.rio/v2/adm_cor_comando/ocorrencias_orgaos_responsaveis/?eventoId='
 
-    response = requests.get(url)
-    data = response.json()
-    eventos = data['eventos']
+    try:
+        response = requests.get(url)
+        data = response.json()
+        eventos = data['eventos']
+        log('Dados de ocorrencias consumido com sucesso.')
+
+    except requests.exceptions.RequestException as e:
+        log(f"Erro ao consumir os dados de ocorrencias: {str(e)}")
+        eventos = []
 
     df_ocorrencias = pd.DataFrame(eventos)
     df_ocorrencias = df_ocorrencias[['titulo', 'status', 'inicio', 'informe_id', 'id', 'pop_id']]
 
-    base_url = 'https://api.dados.rio/v2/adm_cor_comando/ocorrencias_orgaos_responsaveis/?eventoId='
-    log('Dados de ocorrencias por por orgão consumidos com sucesso.')
+    try:
+        df_org = pd.DataFrame()
+        for evento_id in df_ocorrencias['id']:
+            url = base_url + str(evento_id)
+            response = requests.get(url)
 
-    log('Iniciando o tratamento dos dados')
-    df_org = pd.DataFrame()
+            if response.status_code == 200:
+                data = response.json()
+                eventos = data['atividades']
 
-    for evento_id in df_ocorrencias['id']:
-        url = base_url + str(evento_id)
-        response = requests.get(url)
+                for evento in eventos:
+                    evento['id'] = evento_id
+                df_org = pd.concat([df_org, pd.DataFrame(eventos)])
+        log('Dados de ocorrencias por por orgão consumidos com sucesso.')
 
-        if response.status_code == 200:
-            data = response.json()
-            eventos = data['atividades']
-
-            for evento in eventos:
-                evento['id'] = evento_id
-            df_org = pd.concat([df_org, pd.DataFrame(eventos)])
+    except requests.exceptions.RequestException as e:
+        log(f"Erro ao consumir os dados de ocorrencias: {str(e)}")
+        eventos = []
 
     # Etapa - Tratamento dos dados
+    log('Iniciando o tratamento dos dados')
 
     df_CET_RIO = df_org.loc[(df_org['orgao'] == 'CET-RIO')]
     df_CET_RIO = df_CET_RIO.sort_values(by='inicio', ascending=False)
