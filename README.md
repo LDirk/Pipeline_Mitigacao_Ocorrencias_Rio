@@ -38,8 +38,8 @@ tasks.py:
 
   Define a tarefa SCRIPT_ETL(), que realiza as seguintes etapas:
   
-    Extração, verificando catch e log de erros. 
+  Extração, verificando catch e log de erros. 
     
-    Tratamento dos dados. 
+  Tratamento dos dados. 
     
-    Carregamento dos dados em um arquivo Csv.
+  Carregamento dos dados em um arquivo Csv.
