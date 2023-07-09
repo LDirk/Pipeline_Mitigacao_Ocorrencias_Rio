@@ -71,3 +71,7 @@ Quantidade_De_Ocorrencias : Número de ocorrências neste status.
 ###################################################################################################
 
 ### <span style="font-size:larger;">Representação da Pipeline</span>
+
+
+![image](https://github.com/LDirk/SMTR/assets/47995676/09112e02-aea4-46d4-8c0a-1252cd84315d)
+
