@@ -8,4 +8,9 @@ Execute o comando python run.py , certifique-se de estar no diretório correto.
 Alternativamente, você também pode executar a pipeline em qualquer IDE, abrindo o arquivo e executando-o diretamente.
 ###################################################################################################
 
-Esta pipeline tem como objetivo consumir dados da API Dados Rio e gerar um relatório de mitigação de ocorrências da cidade, referente a CET-RIO. O resultado final é um arquivo CSV com as seguintes informações
+Esta pipeline tem como objetivo consumir dados da API Dados Rio e gerar um relatório de mitigação de ocorrências da cidade, referente a CET-RIO. O resultado final é um arquivo CSV com as seguintes informações:
+
+Data_Consulta_Api : Data e horário em que as ocorrências foram verificadas na API.
+Tipo_De_Ocorrencia: Tipo da ocorrência observada.
+Status: Status da ocorrência no horário observado.
+Quantidade_De_Ocorrencias : Número de ocorrências neste status.
