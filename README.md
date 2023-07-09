@@ -35,7 +35,7 @@ tasks.py:
   Importa os módulos e pacotes necessários, como StringIO, pandas, prefect, requests, datetime, timedelta, pytz, os.path e csv.
   
   Importa a função log do arquivo utils.
-  
+
   Define a tarefa SCRIPT_ETL(), que realiza as seguintes etapas:
   
     Extração, verificando catch e log de erros. 
