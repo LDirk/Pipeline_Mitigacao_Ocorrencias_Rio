@@ -21,3 +21,14 @@ Status: Status da ocorrência no horário observado.
 Quantidade_De_Ocorrencias : Número de ocorrências neste status.
 
 ###################################################################################################
+
+Funcionalidades de cada Script 
+
+utils.py
+  Importa o módulo prefect.
+  Define a função log(message) que registra uma mensagem de log usando o logger do contexto do Prefect.
+
+tasks.py:
+  Importa os módulos e pacotes necessários, como StringIO, pandas, prefect, requests, datetime, timedelta, pytz, os.path e csv.
+  Importa a função log do arquivo utils.
+  Define a tarefa SCRIPT_ETL(), que realiza as seguintes etapas:
