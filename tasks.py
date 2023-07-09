@@ -79,10 +79,10 @@ def SCRIPT_ETL():
     filename = 'dados/dados_ocorrencias2.csv'
 
     if not os.path.isfile(filename):
-        df_csv.to_csv(filename, index=False)
+        df_csv.to_csv(filename, index=False,encoding='utf-8')
         log('Dados Salvos em dados/dados_ocorrencias2 com sucesso')
     else:
-        with open(filename, 'a', newline='') as file:
+        with open(filename, 'a', newline='',encoding='utf-8') as file:
             writer = csv.writer(file)
             writer.writerows(df_csv.values)
             log('Dados Salvos em dados/dados_ocorrencias2 com sucesso')
