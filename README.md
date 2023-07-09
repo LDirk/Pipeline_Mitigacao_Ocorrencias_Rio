@@ -22,7 +22,7 @@ Quantidade_De_Ocorrencias : Número de ocorrências neste status.
 
 ###################################################################################################
 
-<span style="font-size:larger;">Funcionalidades de cada Script</span>
+## <span style="font-size:larger;">Funcionalidades de cada Script</span>
 
 **utils.py**
 
