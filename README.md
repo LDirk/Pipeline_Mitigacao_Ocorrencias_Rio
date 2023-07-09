@@ -47,7 +47,11 @@ tasks.py:
 flows.py
 
   Importa os módulos Flow, datetime, timedelta e SCRIPT_ETL do arquivo tasks.
+  
   Importa a classe IntervalSchedule do módulo prefect.schedules.
+  
   Cria um objeto IntervalSchedule para agendar a execução do fluxo.
+  
   Define um fluxo chamado 'Ocorrencias' com o agendamento definido anteriormente.
+  
   Adiciona a tarefa SCRIPT_ETL() ao fluxo
