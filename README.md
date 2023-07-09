@@ -26,9 +26,9 @@ Funcionalidades de cada Script
 
 utils.py
 
-  Importa o módulo prefect.
+    Importa o módulo prefect.
   
-  Define a função log(message) que registra uma mensagem de log usando o logger do contexto do Prefect.
+    Define a função log(message) que registra uma mensagem de log usando o logger do contexto do Prefect.
 
 tasks.py:
 
