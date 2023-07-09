@@ -1,0 +1,12 @@
+def detect_encoding(file_path):
+    with open(file_path, 'rb') as f:
+        raw_data = f.read()
+        result = chardet.detect(raw_data)
+        encoding = result['encoding']
+        confidence = result['confidence']
+        return encoding, confidence
+
+# Exemplo de uso:
+file_path = 'dados_ocorrencias2.csv'
+encoding, confidence = detect_encoding(file_path)
+print(f'O encoding do arquivo é: {encoding} (confiança: {confidence})')
