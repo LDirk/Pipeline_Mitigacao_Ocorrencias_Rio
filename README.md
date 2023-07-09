@@ -6,6 +6,7 @@ Instale as bibliotecas necessárias para a pipeline. No terminal, navegue até o
 
 Execute o comando python run.py , certifique-se de estar no diretório correto. 
 Alternativamente, você também pode executar a pipeline em qualquer IDE, abrindo o arquivo e executando-o diretamente.
+
 ###################################################################################################
 
 Esta pipeline tem como objetivo consumir dados da API Dados Rio e gerar um relatório de mitigação de ocorrências da cidade, 
@@ -18,3 +19,5 @@ Tipo_De_Ocorrencia: Tipo da ocorrência observada.
 Status: Status da ocorrência no horário observado.
 
 Quantidade_De_Ocorrencias : Número de ocorrências neste status.
+
+###################################################################################################
