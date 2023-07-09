@@ -2,6 +2,8 @@
 
 Para executar a pipeline, siga estas etapas: 
 
+        Baixe o presente repositório. 
+        
         Certifique-se de ter o Python instalado em seu sistema. 
 
         Instale as bibliotecas necessárias para a pipeline. 
