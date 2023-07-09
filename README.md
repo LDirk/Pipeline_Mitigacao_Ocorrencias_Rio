@@ -10,7 +10,7 @@ Alternativamente, você também pode executar a pipeline em qualquer IDE, abrind
 ###################################################################################################
 
 Esta pipeline tem como objetivo consumir dados da API Dados Rio e gerar um relatório de mitigação de ocorrências da cidade, 
-a pipeline está configurada para rodar de 20 em 20 minutos por 1 hora , referente a CET-RIO. O resultado final é um arquivo CSV com as seguintes informações:
+a pipeline está configurada para rodar de 20 em 20 minutos por 1 hora (3 requisições) , referente a CET-RIO. O resultado final é um arquivo CSV com as seguintes informações:
 
 Data_Consulta_Api : Data e horário em que as ocorrências foram verificadas na API.
 
