@@ -6,4 +6,4 @@ Instale as bibliotecas necessárias para a pipeline. No terminal, navegue até o
 
 Execute o comando python run.py , certifique-se de estar no diretório correto. 
 Alternativamente, você também pode executar a pipeline em qualquer IDE, abrindo o arquivo e executando-o diretamente.
-#####################################################################################################################################################
+###################################################################################################
