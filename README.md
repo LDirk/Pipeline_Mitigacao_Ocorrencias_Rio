@@ -49,6 +49,9 @@ Quantidade_De_Ocorrencias : Número de ocorrências neste status.
     Tratamento dos dados. 
     
     Carregamento dos dados em um arquivo Csv.
+
+    Observação: Como o ETL de dados não possui uma grande complexidade, o autor não viu nescessidade de separar o seu codigo em 4 funções (main, extract, transform, load) e sim 
+    deixa-lo em apenas uma função. 
   
 **flows.py**
 
