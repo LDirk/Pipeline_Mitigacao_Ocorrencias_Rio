@@ -1,3 +1,5 @@
+## <span style="font-size:larger;"> Execução do PIPELINE </span>
+
 Para executar a pipeline, siga estas etapas: 
 
 Certifique-se de ter o Python instalado em seu sistema. 
