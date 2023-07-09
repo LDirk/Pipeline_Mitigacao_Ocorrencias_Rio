@@ -75,7 +75,7 @@ def SCRIPT_ETL():
 
     log('Dados Tratados com sucesso.')
 
-    # Etapa - Extração dos dados.
+    # Etapa - load dos dados.
 
     filename = 'dados/dados_ocorrencias2.csv'
 
