@@ -30,7 +30,7 @@ Funcionalidades de cada Script
   
     Define a função log(message) que registra uma mensagem de log usando o logger do contexto do Prefect.
 
-tasks.py:
+**tasks.py**
 
     Importa os módulos e pacotes necessários, como StringIO, pandas, prefect, requests, datetime, timedelta, pytz, os.path e csv.
       
@@ -44,7 +44,7 @@ tasks.py:
     
     Carregamento dos dados em um arquivo Csv.
   
-flows.py
+**flows.py**
 
     Importa os módulos Flow, datetime, timedelta e SCRIPT_ETL do arquivo tasks.
   
@@ -56,7 +56,7 @@ flows.py
   
     Adiciona a tarefa SCRIPT_ETL() ao fluxo
   
-run.py
+**run.py**
 
     Importa o fluxo flow do arquivo flows.
   
