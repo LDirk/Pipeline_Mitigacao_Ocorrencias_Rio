@@ -67,3 +67,7 @@ Quantidade_De_Ocorrencias : Número de ocorrências neste status.
     Importa o fluxo flow do arquivo flows.
   
     Executa o fluxo.
+
+###################################################################################################
+
+### <span style="font-size:larger;">Representação da Pipeline</span>
