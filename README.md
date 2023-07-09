@@ -55,3 +55,9 @@ flows.py
   Define um fluxo chamado 'Ocorrencias' com o agendamento definido anteriormente.
   
   Adiciona a tarefa SCRIPT_ETL() ao fluxo
+  
+run.py
+
+  Importa o fluxo flow do arquivo flows.
+  
+  Executa o fluxo.
