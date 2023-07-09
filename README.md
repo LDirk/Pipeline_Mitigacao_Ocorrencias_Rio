@@ -7,3 +7,5 @@ Instale as bibliotecas necessárias para a pipeline. No terminal, navegue até o
 Execute o comando python run.py , certifique-se de estar no diretório correto. 
 Alternativamente, você também pode executar a pipeline em qualquer IDE, abrindo o arquivo e executando-o diretamente.
 ###################################################################################################
+
+Esta pipeline tem como objetivo consumir dados da API Dados Rio e gerar um relatório de mitigação de ocorrências da cidade, referente a CET-RIO. O resultado final é um arquivo CSV com as seguintes informações
