@@ -32,32 +32,32 @@ utils.py
 
 tasks.py:
 
-  Importa os módulos e pacotes necessários, como StringIO, pandas, prefect, requests, datetime, timedelta, pytz, os.path e csv.
-  
-  Importa a função log do arquivo utils.
+    Importa os módulos e pacotes necessários, como StringIO, pandas, prefect, requests, datetime, timedelta, pytz, os.path e csv.
+      
+    Importa a função log do arquivo utils.
 
-  Define a tarefa SCRIPT_ETL(), que realiza as seguintes etapas:
+    Define a tarefa SCRIPT_ETL(), que realiza as seguintes etapas:
   
-  Extração, verificando catch e log de erros. 
+    Extração, verificando catch e log de erros. 
     
-  Tratamento dos dados. 
+    Tratamento dos dados. 
     
-  Carregamento dos dados em um arquivo Csv.
+    Carregamento dos dados em um arquivo Csv.
   
 flows.py
 
-  Importa os módulos Flow, datetime, timedelta e SCRIPT_ETL do arquivo tasks.
+    Importa os módulos Flow, datetime, timedelta e SCRIPT_ETL do arquivo tasks.
   
-  Importa a classe IntervalSchedule do módulo prefect.schedules.
+    Importa a classe IntervalSchedule do módulo prefect.schedules.
   
-  Cria um objeto IntervalSchedule para agendar a execução do fluxo.
+    Cria um objeto IntervalSchedule para agendar a execução do fluxo.
   
-  Define um fluxo chamado 'Ocorrencias' com o agendamento definido anteriormente.
+    Define um fluxo chamado 'Ocorrencias' com o agendamento definido anteriormente.
   
-  Adiciona a tarefa SCRIPT_ETL() ao fluxo
+    Adiciona a tarefa SCRIPT_ETL() ao fluxo
   
 run.py
 
-  Importa o fluxo flow do arquivo flows.
+    Importa o fluxo flow do arquivo flows.
   
-  Executa o fluxo.
+    Executa o fluxo.
