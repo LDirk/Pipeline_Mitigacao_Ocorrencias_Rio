@@ -49,6 +49,7 @@ def SCRIPT_ETL():
     except requests.exceptions.RequestException as e:
         log(f"Erro ao consumir os dados de ocorrencias: {str(e)}")
         eventos = []
+        print(f"Erro ao consumir os dados de ocorrencias: {str(e)}")
 
     # Etapa - Tratamento dos dados
     log('Iniciando o tratamento dos dados')
