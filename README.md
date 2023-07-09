@@ -37,3 +37,9 @@ tasks.py:
   Importa a função log do arquivo utils.
   
   Define a tarefa SCRIPT_ETL(), que realiza as seguintes etapas:
+  
+    Extração, verificando catch e log de erros. 
+    
+    Tratamento dos dados. 
+    
+    Carregamento dos dados em um arquivo Csv.
