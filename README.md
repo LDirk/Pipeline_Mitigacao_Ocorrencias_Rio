@@ -77,6 +77,6 @@ Para executar a pipeline, siga estas etapas:
 
 ### <span style="font-size:larger;">Representação da Pipeline</span>
 
+![image](https://github.com/LDirk/SMTR/assets/47995676/f905eabe-eea4-4f27-b588-e6141d507a70)
 
-![image](https://github.com/LDirk/SMTR/assets/47995676/beb14ed2-df9d-48f9-af50-8104ac771bdc)
 
