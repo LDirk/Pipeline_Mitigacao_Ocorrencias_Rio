@@ -10,6 +10,13 @@ import csv
 
 @task
 
+# Observação: 
+# O ETL deveria ser separado em 3 funções: extract, transform e load para facilitar a manutenção do código.
+# Porém, como o ETL é pequeno, não julguei necessário. 
+# O codigo do ETL está comentado em: 
+    #SMTR/Script_ETL_comentato/ScriptETL.py
+
+
 def SCRIPT_ETL():
 
     current_datetime = datetime.now(pytz.timezone('America/Sao_Paulo'))
